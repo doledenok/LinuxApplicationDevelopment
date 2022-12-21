@@ -45,7 +45,7 @@ void print_hash(const char* type, const char* string)
         int type = RHASH_MD5;
         output_type = RHPR_BASE64;
         if (string[0] == '"')
-            print_hash_of_string(type, output_type, (char*)string+1);
+            print_hash_of_string(type, output_type, string);
         else
             print_hash_of_file(type, output_type, string);
     }
